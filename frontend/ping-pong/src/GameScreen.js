@@ -64,7 +64,7 @@ const GameScreen = ({ socket }) => {
       setPaddle1Pos(newPosition);
     } else if (user === user2) {
       newPosition = Math.max(0, Math.min(300, paddle2Pos + direction)); 
-      socket.emit('movePaddle', { user: "User2", userid: user1, position: newPosition, roomCode: roomCode });
+      socket.emit('movePaddle', { user: "User2", userid: user2, position: newPosition, roomCode: roomCode });
       setPaddle2Pos(newPosition);
     }
   };
